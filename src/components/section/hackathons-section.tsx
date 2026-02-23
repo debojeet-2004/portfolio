@@ -54,9 +54,9 @@ export default function HackathonsSection() {
                     {hackathon.description}
                   </p>
                 )}
-                {hackathon.links && hackathon.links.length > 0 && (
+                {Array.isArray(hackathon.links) && hackathon.links.length > 0 && (
                   <div className="mt-1 flex flex-row flex-wrap items-start gap-2">
-                    {hackathon.links.map((link, idx) => (
+                    {(hackathon.links as { href: string; icon?: React.ReactNode; title: string }[]).map((link, idx) => (
                       <Link
                         href={link.href}
                         key={idx}

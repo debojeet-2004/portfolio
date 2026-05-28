@@ -31,8 +31,11 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 }
 
 export default function WorkSection() {
+  const featuredWork = DATA.work.find((work) => work.isFeatured);
+  const defaultOpenValue = featuredWork?.company;
+
   return (
-    <Accordion type="single" collapsible className="w-full grid gap-6">
+    <Accordion type="single" collapsible defaultValue={defaultOpenValue} className="w-full grid gap-6">
       {DATA.work.map((work) => (
         <AccordionItem
           key={work.company}
@@ -76,8 +79,12 @@ export default function WorkSection() {
               </div>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="p-0 ml-13 text-xs sm:text-sm text-muted-foreground text-justify">
-            {work.description}
+          <AccordionContent className="p-0 ml-13 text-xs sm:text-sm text-muted-foreground text-left">
+            <ul className="list-disc list-outside pl-4 space-y-1.5 leading-relaxed">
+              {work.description.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
           </AccordionContent>
         </AccordionItem>
       ))}

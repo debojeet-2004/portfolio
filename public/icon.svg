@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Sleek premium background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#020408" />
+    </linearGradient>
+    <!-- Glowing green active indicator gradient -->
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <!-- Geometric lettermark gradient -->
+    <linearGradient id="logo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#d1d5db" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Squircle Base matching the page design language -->
+  <rect x="24" y="24" width="464" height="464" rx="140" fill="url(#bg)" stroke="#1e293b" stroke-width="12" />
+  
+  <!-- Modern Geometric 'D' lettermark -->
+  <path d="M 160 140 H 260 C 340 140 380 180 380 256 C 380 332 340 372 260 372 H 160 Z" fill="url(#logo)" />
+  
+  <!-- Inner stem subtraction cutout -->
+  <path d="M 215 195 H 255 C 295 195 315 215 315 256 C 315 297 295 317 255 317 H 215 Z" fill="#090d16" />
+  
+  <!-- Green active indicator dot -->
+  <circle cx="380" cy="150" r="42" fill="url(#accent)" stroke="#090d16" stroke-width="12" />
+</svg>

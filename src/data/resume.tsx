@@ -181,7 +181,7 @@ export const DATA: ResumeData = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/projects", icon: Briefcase, label: "Projects" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "debojeetkarmakar2004@outlook.com",

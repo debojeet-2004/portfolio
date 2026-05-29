@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: "SafeHealth",
     slug: "safehealth",
     href: "https://chatcollect.com",
-    dates: "Jan 2024 - Feb 2024",
+    dates: "Oct 2024 - Dec 2024",
     active: true,
     isFeatured: true,
     category: "personal",

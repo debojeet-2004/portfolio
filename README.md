@@ -1,70 +1,7 @@
 <div align="center">
 
 <!-- Vector Banner -->
-<svg width="100%" height="240" viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0f19" />
-      <stop offset="50%" stop-color="#111827" />
-      <stop offset="100%" stop-color="#0f172a" />
-    </linearGradient>
-    
-    <!-- Accent Gradients -->
-    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#818cf8" />
-    </linearGradient>
-    
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#cbd5e1" />
-    </linearGradient>
-    
-    <!-- Glow Filter -->
-    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="12" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
-  </defs>
-
-  <!-- Background Base -->
-  <rect width="100%" height="240" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
-
-  <!-- Aesthetic Grid Overlay -->
-  <path d="M 0,40 H 800 M 0,80 H 800 M 0,120 H 800 M 0,160 H 800 M 0,200 H 800" stroke="#334155" stroke-opacity="0.08" stroke-width="1"/>
-  <path d="M 100,0 V 240 M 200,0 V 240 M 300,0 V 240 M 400,0 V 240 M 500,0 V 240 M 600,0 V 240 M 700,0 V 240" stroke="#334155" stroke-opacity="0.08" stroke-width="1"/>
-
-  <!-- Top Ambient Glow -->
-  <circle cx="700" cy="40" r="110" fill="#6366f1" fill-opacity="0.15" filter="url(#glow)"/>
-  <circle cx="100" cy="200" r="80" fill="#0ea5e9" fill-opacity="0.1" filter="url(#glow)"/>
-
-  <!-- Abstract Aesthetic Vector Shapes (Right Side) -->
-  <!-- Outer Glow Ring -->
-  <circle cx="640" cy="120" r="70" stroke="url(#accentCyan)" stroke-width="1" stroke-dasharray="8,6" opacity="0.3"/>
-  <circle cx="640" cy="120" r="55" stroke="#818cf8" stroke-width="1.5" opacity="0.5"/>
-  <!-- Glowing Center -->
-  <circle cx="640" cy="120" r="30" fill="url(#accentCyan)" opacity="0.1" filter="url(#glow)"/>
-  <circle cx="640" cy="120" r="12" fill="#38bdf8"/>
-  
-  <!-- Modern Lines -->
-  <path d="M 520,120 L 590,120" stroke="#334155" stroke-width="2" stroke-dasharray="4,4"/>
-  <path d="M 640,40 L 640,80" stroke="#334155" stroke-width="2" stroke-dasharray="4,4"/>
-
-  <!-- Left Side Branding Text -->
-  <!-- Small Pre-Title -->
-  <text x="60" y="75" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="800" letter-spacing="3" opacity="0.9">PORTFOLIO & WORKSPACE</text>
-  
-  <!-- Main Name -->
-  <text x="56" y="125" fill="url(#textGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="-1">Debojeet Karmakar</text>
-  
-  <!-- Subtitle / Tagline -->
-  <text x="60" y="165" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="500" letter-spacing="1">Full-Stack Engineer  |  Product Architect  |  Data Analyst</text>
-
-  <!-- Glowing Accent Line -->
-  <rect x="60" y="185" width="80" height="4" rx="2" fill="url(#accentCyan)"/>
-</svg>
-
+<img src="./banner.svg" width="100%" alt="Debojeet Karmakar Banner" />
 <br/>
 
 ### B.Tech Computer Science Graduate • Kolkata, India

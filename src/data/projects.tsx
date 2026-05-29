@@ -14,14 +14,14 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/debojeet-2004/safehealth",
     description: "Healthcare app for understanding prescriptions and scheduling medication intake using React Native, Supabase, and AI-powered analysis.",
     technologies: [
-      "Next.js",
+      "Expo",
       "React Native",
       "Typescript",
       "PostgreSQL",
       "Drizzle",
       "Neon",
-      "TailwindCSS",
-      "Shadcn UI",
+      "Open Ai Apis",
+      "Supabase Storage",
     ],
     badges: [
       {
@@ -64,13 +64,16 @@ export const projects: Project[] = [
     description: "Designed, developed and sold animated UI components for developers.",
     technologies: [
       "Next.js",
+      "React",
+      "ora",
+      "Chalk",
+      "commander",
       "Typescript",
       "PostgreSQL",
-      "Prisma",
+      "Drizzle",
+      "Neon",
       "TailwindCSS",
-      "Stripe",
       "Shadcn UI",
-      "Magic UI",
     ],
     badges: [
       {
@@ -85,21 +88,20 @@ export const projects: Project[] = [
     image: "https://atqpgrvnzrohszocxpxz.supabase.co/storage/v1/object/public/Devbuilds-media/devbuilds-cli-tool.webp",
     video: "",
     fullDescription: `# Devbuilds CLI Tool - Instant Modern Component Ingestion
+      Devbuilds is an interactive command-line interface tool that enables web engineers to inject beautiful, ready-to-use React and Tailwind CSS components directly into their localized codebases. Built with high performance and accessibility in mind, it bridges the gap between complex UI design systems and day-to-day coding productivity.
 
-    Devbuilds is an interactive command-line interface tool that enables web engineers to inject beautiful, ready-to-use React and Tailwind CSS components directly into their localized codebases. Built with high performance and accessibility in mind, it bridges the gap between complex UI design systems and day-to-day coding productivity.
+      ## Key Features
 
-    ## Key Features
+      - **Interactive CLI UI:** Intuitive terminal experience built on top of Clack for seamless component selection and customization.
+      - **Zero-Config Integrations:** Auto-detects project configurations (Next.js, Vite, Tailwind CSS, shadcn settings) and installs necessary dependencies out-of-the-box.
+      - **Dynamic Registries:** Connects to remote UI registries to fetch, compile, and stream components with custom presets.
+      - **Tailwind v4 Optimized:** Full compatibility with the latest Tailwind CSS v4 design pipelines.
 
-    - **Interactive CLI UI:** Intuitive terminal experience built on top of Clack for seamless component selection and customization.
-    - **Zero-Config Integrations:** Auto-detects project configurations (Next.js, Vite, Tailwind CSS, shadcn settings) and installs necessary dependencies out-of-the-box.
-    - **Dynamic Registries:** Connects to remote UI registries to fetch, compile, and stream components with custom presets.
-    - **Tailwind v4 Optimized:** Full compatibility with the latest Tailwind CSS v4 design pipelines.
+      ## Tech Stack Overview
 
-    ## Tech Stack Overview
-
-    - **Runtime & CLI Engine:** Node.js, Commander.js, and Clack for building the terminal shell.
-    - **Component Stack:** React, Tailwind CSS, shadcn UI, and Magic UI tokens.
-    - **Bundler & Compiler:** Bun and esbuild for lightning-fast compilation speeds.`
+      - **Runtime & CLI Engine:** Node.js, Commander.js, and Clack for building the terminal shell.
+      - **Component Stack:** React, Tailwind CSS, shadcn UI, and Magic UI tokens.
+      - **Bundler & Compiler:** Bun and esbuild for lightning-fast compilation speeds.`
   },
   {
     title: "ZenoAI",
@@ -110,15 +112,18 @@ export const projects: Project[] = [
     isFeatured: false,
     category: "personal",
     status: "completed",
-    githubUrl: "https://github.com/debojeet-2004/zenoai",
+    // githubUrl: "",
     description: "AI-powered RAG SaaS enabling businesses to build chatbots on custom data and deploy them instantly via script widgets.",
     technologies: [
       "Next.js",
       "React",
       "Typescript",
+      "Supabase",
       "PostgreSQL",
       "Drizzle",
       "pgvector",
+      "Vercel",
+      "Vercel AI SDK",
       "Gemini AI",
       "Better Auth",
       "Dodo Payments",
@@ -134,23 +139,22 @@ export const projects: Project[] = [
     image: "https://atqpgrvnzrohszocxpxz.supabase.co/storage/v1/object/public/Devbuilds-media/zenoai.webp",
     video: "",
     fullDescription: `# ZenoAI - Custom Data AI Chatbot Deployer
+      ZenoAI is a modern AI-powered RAG (Retrieval-Augmented Generation) SaaS platform that enables businesses to build context-aware chatbots trained on custom files and deploy them instantly on any website.
 
-    ZenoAI is a modern AI-powered RAG (Retrieval-Augmented Generation) SaaS platform that enables businesses to build context-aware chatbots trained on custom files and deploy them instantly on any website.
+      ## Key Features
 
-    ## Key Features
+      - **Custom Knowledge Ingestion:** Upload PDFs, company wikis, product catalogs, or FAQs to train your chatbot.
+      - **Embeddable Chat Widget:** Integrate the AI assistant into any landing page using a lightweight JavaScript snippet.
+      - **Secure Sandbox Security:** Includes API key management and origin domain restrictions to prevent unauthorized use.
+      - **Live Memory & Streaming:** Supports real-time streaming conversations with multi-turn session memory.
+      - **Monetization & Billing:** Organization-based multi-tenant workspaces powered by Better Auth and Dodo Payments billing.
 
-    - **Custom Knowledge Ingestion:** Upload PDFs, company wikis, product catalogs, or FAQs to train your chatbot.
-    - **Embeddable Chat Widget:** Integrate the AI assistant into any landing page using a lightweight JavaScript snippet.
-    - **Secure Sandbox Security:** Includes API key management and origin domain restrictions to prevent unauthorized use.
-    - **Live Memory & Streaming:** Supports real-time streaming conversations with multi-turn session memory.
-    - **Monetization & Billing:** Organization-based multi-tenant workspaces powered by Better Auth and Dodo Payments billing.
+      ## Technical Architecture & RAG Pipeline
 
-    ## Technical Architecture & RAG Pipeline
-
-    - **Vector Database:** Stores high-dimensional document chunk embeddings inside PostgreSQL using pgvector.
-    - **Embedding Generation:** Generates document chunk vectors dynamically via Gemini Embeddings API.
-    - **Semantic Retrieval:** Queries relevant company knowledge in real-time using cosine similarity vector search.
-    - **Contextual Generation:** Combines retrieved knowledge chunks with chat history to stream accurate responses using Gemini 2.5 Flash models.`
+      - **Vector Database:** Stores high-dimensional document chunk embeddings inside PostgreSQL using pgvector.
+      - **Embedding Generation:** Generates document chunk vectors dynamically via Gemini Embeddings API.
+      - **Semantic Retrieval:** Queries relevant company knowledge in real-time using cosine similarity vector search.
+      - **Contextual Generation:** Combines retrieved knowledge chunks with chat history to stream accurate responses using Gemini 2.5 Flash models.`
   },
   {
     title: "Nirmal Dental Care",
@@ -168,7 +172,7 @@ export const projects: Project[] = [
       "React",
       "Typescript",
       "TailwindCSS",
-      "Framer Motion",
+      "Vercel",
       "Shadcn UI",
     ],
     badges: [

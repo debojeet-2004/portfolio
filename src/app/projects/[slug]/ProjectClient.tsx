@@ -8,6 +8,8 @@ import { Project } from "@/data/resume";
 import { ProjectMarkdown } from "@/components/project/ProjectMarkdown";
 import { ProjectActions } from "@/components/project/ProjectActions";
 import { ProjectCard } from "@/components/project/ProjectCard";
+import BlurFade from "@/components/magicui/blur-fade";
+import ContactSection from "@/components/section/contact-section";
 
 interface ProjectClientProps {
   project: Project;
@@ -179,6 +181,13 @@ export default function ProjectClient({ project, relatedProjects }: ProjectClien
             </div>
           </div>
         )}
+
+        {/* Contact Section */}
+        <section id="contact" className="mt-16 border-t border-border/60 pt-16">
+          <BlurFade delay={0.06 * 4}>
+            <ContactSection />
+          </BlurFade>
+        </section>
       </div>
     </div>
   );

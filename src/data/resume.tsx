@@ -135,13 +135,13 @@ export interface ResumeData {
 export const DATA: ResumeData = {
   name: "Debojeet karmakar",
   initials: "DK",
-  url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  url: "https://debojeet.in",
+  location: "Kolkata, West Bengal",
+  locationLink: "https://www.google.com/maps/place/Kolkata",
   description:
     "Fullstack Developer and Designer | Freelancer and SaaS developer. Passionate about exploring, traveling, and embracing nature.",
   summary:
-    "**__22-year-old__** B.Tech graduate in **Computer Science**, always fascinated by new developments in the AI world. I love to **build things and experiment** some might call me a bit nerdy, but I like to think I’m even more creative, always exploring what I can do best in this fast-moving landscape. I’m *curious by nature*, **passionate about technology**, and constantly on the lookout for exciting opportunities to grow and make an impact.",
+    "**Computer Science graduate** and **Full-Stack Developer** specializing in building high-performance web applications, interactive interfaces, and AI integrations. Experienced in scaling SaaS products from **0 to 44k+ active users**, designing modular UI architectures with **Next.js, React, and TypeScript**, and building backend pipelines with **Node.js, Express, and PostgreSQL**. Passionate about leveraging data and AI/ML technologies to solve real-world problems and deliver clean, premium user experiences.",
   avatarUrl: "https://atqpgrvnzrohszocxpxz.supabase.co/storage/v1/object/public/Devbuilds-media/debojeet-compressed.webp",
   activeMood: "opportunities",
   skills: [
@@ -181,7 +181,7 @@ export const DATA: ResumeData = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/projects", icon: Briefcase, label: "Projects" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "debojeetkarmakar2004@outlook.com",
@@ -234,9 +234,9 @@ export const DATA: ResumeData = {
       end: "April 2026",
       isFeatured: true,
       description: [
-        "Engineered Prepverse from the ground up, an AI-driven candidate assessment and scheduling platform utilizing advanced machine learning models.",
-        "Designed and implemented the complete coding interview terminal interface and an AI-powered verbal assessment module.",
-        "Built a fully-featured administrator dashboard and a custom drag-and-drop Resume Builder with a highly polished, responsive UI using shadcn components."
+        "Scaled and co-managed the Prepverse SaaS platform from 0 to 44,000+ active users, co-directing Full-Stack system architecture built on Next.js",
+        "Designed and implemented real-time AI-powered candidate assessments, collaborative coding terminals, and drag-and-drop builder modules using WebSockets and Vercel AI SDK.",
+        "Optimized data storage layers and querying pipelines using PostgreSQL, Neon, and Drizzle ORM, successfully reducing dashboard query latency by over 35%."
       ],
     },
     {
@@ -250,9 +250,9 @@ export const DATA: ResumeData = {
       end: "Sept 2024",
       isFeatured: false,
       description: [
-        "Developed a high-performance, responsive landing page and intuitive educational interface using shadcn/ui components for byte-sized content delivery.",
-        "Architected and integrated personalized, dynamic student career pathways and interactive track builders.",
-        "Bridged academic curricula with real-world industry standards, resulting in highly engaging, goal-oriented learning flows."
+        "Developed high-converting, responsive landing pages and interactive dashboards using React, TypeScript, and TailwindCSS, driving a 25% increase in user retention.",
+        "Architected scalable, dynamic learning paths and modular track builders, optimizing state management via React Query and Zustand.",
+        "Composed accessible UI components (WCAG compliant) based on Radix UI and shadcn templates, ensuring pixel-perfect responsive layouts across devices."
       ],
     },
   ],

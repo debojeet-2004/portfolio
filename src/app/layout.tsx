@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { PortfolioChatbot } from "@/rag/chat_interface";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -90,6 +91,7 @@ export default function RootLayout({
             </div>
             <div className="relative z-10 max-w-6xl mx-auto py-12 pb-24 sm:py-24 px-6 border-x ring-1 ring-border ring-offset-4 ring-offset-background">
               {children}
+              <PortfolioChatbot/>
             </div>
             <Navbar />
           </TooltipProvider>

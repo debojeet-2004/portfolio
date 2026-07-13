@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import { projects } from "./projects";
 
 import { Typescript } from "@/components/ui/svgs/typescript";
+import { PowerBI } from "@/components/ui/svgs/powerbi";
 import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
@@ -27,11 +28,30 @@ import { SiNextdotjs } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { SiReactquery } from "react-icons/si";
 import { SiBetterauth } from "react-icons/si";
+import { MdDashboardCustomize } from "react-icons/md";
+import { VscVscodeInsiders } from "react-icons/vsc";
+import { RiFileExcel2Fill } from "react-icons/ri";
+import { FaDatabase } from "react-icons/fa";
+
+
 import { Zustand } from "@/components/ui/svgs/zustand";
+
 import DodopaymentsIcon from "@/components/ui/svgs/dodo-payments";
 import { triggerDevIcon } from "@/components/ui/svgs/trigger-dev";
 
 // Interfaces
+
+export interface SkillCategory {
+  id: string;
+  title: string;
+  skills: Skill[];
+}
+
+export interface SkillsData {
+  data: SkillCategory[];
+  software: SkillCategory[];
+}
+
 export interface Skill {
   name: string;
   icon: React.ComponentType<any>;
@@ -121,7 +141,7 @@ export interface ResumeData {
   description: string;
   summary: string;
   avatarUrl: string;
-  skills: Skill[];
+  skills: SkillsData;
   navbar: NavbarItem[];
   contact: Contact;
   work: WorkExperience[];
@@ -141,43 +161,111 @@ export const DATA: ResumeData = {
   description:
     "Fullstack Developer and Designer | Freelancer and SaaS developer. Passionate about exploring, traveling, and embracing nature.",
   summary:
-    "**Computer Science graduate** and **Full-Stack Developer** specializing in building high-performance web applications, interactive interfaces, and AI integrations. Experienced in scaling SaaS products from **0 to 44k+ active users**, designing modular UI architectures with **Next.js, React, and TypeScript**, and building backend pipelines with **Node.js, Express, and PostgreSQL**. Passionate about leveraging data and AI/ML technologies to solve real-world problems and deliver clean, premium user experiences.",
+    "**Computer Science graduate** with nearly **two years of professional experience** as a **Full-Stack Developer**, now transitioning into **Data Analytics**. Experienced in building scalable SaaS applications, AI-powered features, and data-driven dashboards, including contributing to the growth of a platform from **0 to 44k+ active users**. Skilled in **SQL, Python, Excel, Power BI, and data visualization**, with a passion for transforming raw data into **actionable business insights**. I enjoy solving business problems through analytics while also leveraging my software engineering background to **automate workflows, build internal tools, and develop AI-powered solutions** that improve decision-making and operational efficiency.",
   avatarUrl: "https://atqpgrvnzrohszocxpxz.supabase.co/storage/v1/object/public/Devbuilds-media/debojeet-compressed.webp",
   activeMood: "opportunities",
-  skills: [
-    { name: "Next.js", icon: SiNextdotjs, category: "frontend" },
-    { name: "React", icon: FaReact, category: "frontend" },
-    { name: "Typescript", icon: Typescript, category: "frontend" },
-    { name: "BetterAuth", icon: SiBetterauth, category: "auth" },
-    { name: "shadcn", icon: SiShadcnui, category: "design" },
-    { name: "Node.js", icon: Nodejs, category: "backend" },
-    { name: "Express", icon: SiExpress, category: "backend" },
-    { name: "Drizzle", icon: SiDrizzle, category: "backend" },
-    { name: "Postgresql", icon: Postgresql, category: "backend" },
-    { name: "Neon", icon: Neon, category: "backend" },
-    { name: "Dodo Payments", icon: DodopaymentsIcon, category: "auth" },
+  skills: {
+    data: [
+      {
+        id: "analysis",
+        title: "Data Analysis",
+        skills: [
+          { name: "SQL", icon: FaDatabase },
+          { name: "Excel", icon: RiFileExcel2Fill },
+          { name: "Python", icon: FaPython },
+        ],
+      },
+      {
+        id: "python",
+        title: "Python Ecosystem",
+        skills: [
+          { name: "NumPy", icon: FaPython },
+          { name: "Pandas", icon: FaPython },
+          { name: "Matplotlib", icon: FaPython },
+          { name: "Seaborn", icon: FaPython },
+        ],
+      },
+      {
+        id: "visualization",
+        title: "Visualization & BI",
+        skills: [
+          { name: "Power BI", icon: PowerBI },
+          { name: "Dashboarding", icon: MdDashboardCustomize },
+          // { name: "EDA", icon: Icons.chart },
+        ],
+      },
+      {
+        id: "tools",
+        title: "Databases & Tools",
+        skills: [
+          { name: "PostgreSQL", icon: Postgresql },
+          { name: "Neon", icon: Neon },
+          { name: "Git", icon: FaGithub },
+          { name: "VS Code", icon: VscVscodeInsiders },
+        ],
+      },
+    ],
 
-    { name: "Zod", icon: SiZod, category: "frontend" },
-    { name: "Zustand", icon: Zustand, category: "frontend" },
-    { name: "TanStack Query", icon: SiReactquery, category: "frontend" },
-    { name: "Trigger.dev", icon: triggerDevIcon, category: "auth" },
-    { name: "Supabase", icon: SiSupabase, category: "backend" },
-    { name: "Firebase", icon: IoLogoFirebase, category: "backend" },
-    { name: "Github", icon: FaGithub, category: "infra" },
-
-    { name: "React Native", icon: TbBrandReactNative, category: "frontend" },
-    { name: "Expo", icon: SiExpo, category: "frontend" },
-
-    { name: "Notion", icon: SiNotion, category: "design" },
-    { name: "Tldraw", icon: SiTldraw, category: "design" },
-    { name: "Figma", icon: IoLogoFigma, category: "design" },
-
-    { name: "Docker", icon: Docker, category: "infra" },
-    { name: "Vercel", icon: RiVercelFill, category: "infra" },
-    { name: "Azure", icon: VscAzure, category: "infra" },
-
-    { name: "Python", icon: FaPython, category: "backend" },
-  ],
+    software: [
+      {
+        id: "frontend",
+        title: "Frameworks & Client-Side",
+        skills: [
+          { name: "Next.js", icon: SiNextdotjs },
+          { name: "React", icon: FaReact },
+          { name: "Typescript", icon: Typescript },
+          { name: "Zod", icon: SiZod },
+          { name: "Zustand", icon: Zustand },
+          { name: "TanStack Query", icon: SiReactquery },
+          { name: "React Native", icon: TbBrandReactNative },
+          { name: "Expo", icon: SiExpo },
+        ],
+      },
+      {
+        id: "backend",
+        title: "Backend & Databases",
+        skills: [
+          { name: "Node.js", icon: Nodejs },
+          { name: "Express", icon: SiExpress },
+          { name: "Drizzle", icon: SiDrizzle },
+          { name: "PostgreSQL", icon: Postgresql },
+          { name: "Neon", icon: Neon },
+          { name: "Supabase", icon: SiSupabase },
+          { name: "Firebase", icon: IoLogoFirebase },
+          { name: "Python", icon: FaPython },
+        ],
+      },
+      {
+        id: "auth",
+        title: "Authentication & Payments",
+        skills: [
+          { name: "BetterAuth", icon: SiBetterauth },
+          { name: "Dodo Payments", icon: DodopaymentsIcon },
+          { name: "Trigger.dev", icon: triggerDevIcon },
+        ],
+      },
+      {
+        id: "design",
+        title: "Design & UI Architecture",
+        skills: [
+          { name: "shadcn", icon: SiShadcnui },
+          { name: "Notion", icon: SiNotion },
+          { name: "Tldraw", icon: SiTldraw },
+          { name: "Figma", icon: IoLogoFigma },
+        ],
+      },
+      {
+        id: "infra",
+        title: "Infrastructure & Tools",
+        skills: [
+          { name: "GitHub", icon: FaGithub },
+          { name: "Docker", icon: Docker },
+          { name: "Vercel", icon: RiVercelFill },
+          { name: "Azure", icon: VscAzure },
+        ],
+      },
+    ],
+  },
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/projects", icon: Briefcase, label: "Projects" },

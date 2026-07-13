@@ -13,6 +13,7 @@ import { ArrowUpRight, FileText, Code2, Database, ShieldCheck, Palette, Cloud } 
 import DitherShader from "@/components/ui/dither-shader";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import SkillsSection from "./skills-section";
 
 const BLUR_FADE_DELAY = 0.06;
 
@@ -286,79 +287,7 @@ export default function Page() {
       </section>
 
       <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold tracking-tight">Skills & Tech Stack</h2>
-            <p className="text-muted-foreground mt-1 text-sm sm:text-base">
-              A curated breakdown of the technologies, frameworks, and tools I have solid experience working with:
-            </p>
-          </BlurFade>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {CATEGORY_METADATA.map((category, catId) => {
-              const matchedSkills = DATA.skills.filter((s) => s.category === category.id);
-              if (matchedSkills.length === 0) return null;
-                
-              return (
-                <BlurFade
-                  key={category.title}
-                  delay={BLUR_FADE_DELAY * (10 + catId)}
-                  className={cn(catId === 4 && "md:col-span-2")}
-                >
-                  <div className={cn(
-                    "border border-border/60 bg-card/45 backdrop-blur-md rounded-2xl p-5 flex flex-col gap-4 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group h-full",
-                    category.hoverClass,
-                    category.bgGradient
-                  )}>
-                    {/* Glowing background accent on hover */}
-                    <div className={cn(
-                      "absolute -right-8 -top-8 size-24 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none",
-                      category.glowBg
-                    )} />
-                    
-                    {/* Subtle grid background pattern */}
-                    <svg className="absolute inset-0 size-full stroke-muted-foreground/[0.025] dark:stroke-muted-foreground/[0.045] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] pointer-events-none" aria-hidden="true">
-                      <defs>
-                        <pattern id={category.gridId} width="16" height="16" patternUnits="userSpaceOnUse" x="-1" y="-1">
-                          <path d="M.5 16V.5H16" fill="none" />
-                        </pattern>
-                      </defs>
-                      <rect width="100%" height="100%" fill={`url(#${category.gridId})`} />
-                    </svg>
-                    
-                    <div className="flex items-center gap-3 relative z-10">
-                      <div className={cn(
-                        "p-2 rounded-xl border flex items-center justify-center shadow-xs",
-                        category.iconBoxClass
-                      )}>
-                        <category.icon className="size-4 shrink-0" />
-                      </div>
-                      <h3 className="font-semibold text-sm sm:text-base text-card-foreground">
-                        {category.title}
-                      </h3>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2 relative z-10 mt-auto">
-                      {matchedSkills.map((skill) => (
-                        <div
-                          key={skill.name}
-                          className="border bg-background/60 hover:bg-background/90 hover:border-border transition-colors border-border/40 rounded-xl h-8 px-3 flex items-center gap-2 select-none"
-                        >
-                          {skill.icon && (
-                            <skill.icon className="size-4 rounded overflow-hidden object-contain shrink-0" />
-                          )}
-                          <span className="text-card-foreground text-xs font-medium">
-                            {skill.name}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </BlurFade>
-              );
-            })}
-          </div>
-        </div>
+        <SkillsSection />
       </section>
 
       <section id="projects">

@@ -2,7 +2,7 @@
 
 ## Bachelor of Technology (B.Tech)
 
-**Degree:** Bachelor of Technology in Computer Science & Engineering
+**Degree:** Bachelor of Technology in Computer Science & Engineering (Completed)
 
 **University:** JIS University
 

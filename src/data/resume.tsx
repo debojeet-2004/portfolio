@@ -132,6 +132,16 @@ export interface Hackathon {
   links: string[];
 }
 
+export interface Certification {
+  title: string;
+  organization: string;
+  platform: string;
+  dates: string;
+  credentialUrl: string;
+  logoUrl?: string;
+  skillsGained: string[];
+}
+
 export interface ResumeData {
   name: string;
   initials: string;
@@ -148,6 +158,7 @@ export interface ResumeData {
   education: Education[];
   projects: Project[];
   hackathons: Hackathon[];
+  certifications: Certification[];
   activeMood?: "opportunities" | "travelling" | "away";
 }
 
@@ -396,5 +407,65 @@ export const DATA: ResumeData = {
       links: [],
     },
 
+  ],
+  certifications: [
+    {
+      title: "Google Data Analytics Professional Certificate",
+      organization: "Google",
+      platform: "Coursera",
+      dates: "2026",
+      credentialUrl: "https://coursera.org/share/aba2b286206637349a2d4bc000d476f4",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg",
+      skillsGained: [
+        "Data Cleaning",
+        "Data Analysis",
+        "Data Visualization",
+        "SQL",
+        "Spreadsheet Analysis",
+        "Python Programming (Fundamentals)",
+        "Data Ethics",
+        "Data-Driven Decision Making",
+        "Business Analysis",
+        "Analytical Thinking",
+      ],
+    },
+    {
+      title: "Excel Basics for Data Analysis",
+      organization: "IBM",
+      platform: "Coursera",
+      dates: "2026",
+      credentialUrl: "https://coursera.org/share/a381be3c810120166b9478a26095dfa7",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+      skillsGained: [
+        "Microsoft Excel",
+        "Data Cleaning",
+        "Data Preparation",
+        "Sorting & Filtering",
+        "Pivot Tables",
+        "Basic Data Analysis",
+        "Spreadsheet Functions",
+        "Data Organization",
+      ],
+    },
+    {
+      title: "Databases and SQL for Data Science with Python",
+      organization: "IBM",
+      platform: "Coursera",
+      dates: "2026",
+      credentialUrl: "https://coursera.org/share/087fd173a2a6e8bf088b07f5daf44ff9",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+      skillsGained: [
+        "SQL",
+        "PostgreSQL",
+        "Database Design",
+        "Data Retrieval",
+        "Data Filtering",
+        "Joins",
+        "Aggregations",
+        "Subqueries",
+        "Database Concepts",
+        "SQL with Python",
+      ],
+    },
   ],
 } as const;

@@ -1,0 +1,94 @@
+---
+title: "Pivoting to Data Analytics: My Learning Journey & Tech Stack"
+publishedAt: "2026-07-13"
+updatedAt: "2026-07-13"
+author: "Debojeet Karmakar"
+summary: "An inside look into my transition from full-stack development to data analytics, covering SQL mastery, Python CLI tools, and Power BI dashboards."
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=400&fit=crop"
+---
+
+Pivoting from writing software to analyzing raw data is both exciting and challenging. In this post, I want to share how my personal **transition to data analytics** is going, the core skills I have built, and the exciting projects I am planning next.
+
+---
+
+## What This Article Covers
+
+* Why I decided to pivot from full-stack engineering to analytics
+* How SQL became my absolute strongest skill in this new domain
+* Python learning and my concept for a CLI analytics automation tool
+* Getting comfortable with Power BI and Microsoft Excel
+* My career goals for August and September 2026
+
+---
+
+## Why the Transition to Data Analytics?
+
+As a full-stack engineer, I loved building SaaS applications. However, over time, I noticed that the most satisfying part of my work wasn't just constructing database tables—it was analyzing what was inside them. 
+
+I fell in love with finding hidden patterns, designing dashboards, and helping businesses make smart, data-driven decisions. That realization kickstarted my dedication to data analytics.
+
+---
+
+## SQL: The Ultimate Core Pillar
+
+If there is one skill that has become my absolute superpower, it is **SQL**. Coming from a backend background, I was already familiar with basic queries, but diving deep into database analysis took things to a whole new level. 
+
+I've mastered window functions, CTEs (Common Table Expressions), and complex joins to clean, filter, and aggregate huge datasets efficiently. Here is a query pattern I write frequently to analyze cohort retention:
+
+```sql
+WITH user_cohorts AS (
+    SELECT 
+        user_id, 
+        DATE_TRUNC('month', created_at) AS cohort_month
+    FROM users
+),
+first_orders AS (
+    SELECT 
+        user_id, 
+        MIN(order_date) AS first_order_date
+    FROM orders
+    GROUP BY user_id
+)
+SELECT 
+    c.cohort_month,
+    COUNT(DISTINCT c.user_id) AS total_users,
+    COUNT(DISTINCT fo.user_id) AS activated_users
+FROM user_cohorts c
+LEFT JOIN first_orders fo ON c.user_id = fo.user_id
+GROUP BY 1
+ORDER BY 1;
+```
+
+> [!IMPORTANT]
+> Query optimization is key. Always index columns used in JOIN and WHERE clauses to avoid sluggish dashboards and performance bottlenecks.
+
+---
+
+## Python & The Idea for a Data CLI Automation Tool
+
+Right now, my main focus is mastering **Python** and its powerful scientific libraries like Pandas, NumPy, Seaborn, and Matplotlib. 
+
+Because I love building helper programs for developers under my brand **[Devbuilds](https://devbuilds.in)**, I am working on an exciting project idea: **a CLI-based analytics automation tool**. 
+
+This CLI tool will allow analysts to instantly run exploratory data analysis (EDA), generate clean visualizations, and export summary statistics right from their terminal using simple commands. I can't wait to build and share it with the community!
+
+![Python Code on Screen](https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=400&fit=crop)
+*Writing custom Python scripts to automate data preprocessing and Exploratory Data Analysis.*
+
+---
+
+## Getting Cozy with Excel and Power BI
+
+Admittedly, transitioning to GUI-heavy tools like **Microsoft Excel** and **Power BI** felt a little strange at first. As a developer, I am used to writing raw code rather than using visual interfaces. 
+
+However, as I spent more time building dashboards, writing DAX formulas, and playing with Pivot Tables, I started getting very comfortable and familiar with them. The ability to quickly draft an interactive chart in Excel or set up dynamic filters in Power BI is incredibly satisfying.
+
+---
+
+## Looking Ahead to August-September 2026
+
+My transition is progressing rapidly, and I am currently working on freelance dashboard design while actively applying for roles. 
+
+I am hoping to secure my first official full-time role as a **Data Analyst** by **August-September 2026**. I'm eager to bring my unique blend of software automation, database optimization, and data-driven storytelling to a collaborative product team.
+
+*If you want to collaborate on a data project or discuss opportunities, check out my **[Portfolio Projects](https://debojeet.in/projects)** or reach out to me directly on **[LinkedIn](https://www.linkedin.com/in/debojeet-karmakar-852820210)**!*

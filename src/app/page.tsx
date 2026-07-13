@@ -9,11 +9,12 @@ import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
+import CertificationsSection from "@/components/section/certifications-section";
 import { ArrowUpRight, FileText, Code2, Database, ShieldCheck, Palette, Cloud } from "lucide-react";
 import DitherShader from "@/components/ui/dither-shader";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import SkillsSection from "./skills-section";
+import SkillsSection from "../components/section/skills-section";
 
 const BLUR_FADE_DELAY = 0.06;
 
@@ -299,6 +300,12 @@ export default function Page() {
       <section id="hackathons">
         <BlurFade delay={BLUR_FADE_DELAY * 13}>
           <HackathonsSection />
+        </BlurFade>
+      </section>
+
+      <section id="certifications">
+        <BlurFade delay={BLUR_FADE_DELAY * 14}>
+          <CertificationsSection />
         </BlurFade>
       </section>
 
